@@ -30,7 +30,7 @@ export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ 
     // Clean up the world directory
     const { rmSync } = await import('fs')
     const { join } = await import('path')
-    const dir = join('/home/z/my-project/mc-servers', id)
+    const dir = join(process.cwd(), 'mc-servers', id)
     try { rmSync(dir, { recursive: true, force: true }) } catch {}
 
     await db.server.delete({ where: { id } })

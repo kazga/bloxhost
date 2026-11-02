@@ -5,7 +5,7 @@ import { join } from 'path'
 
 export const dynamic = 'force-dynamic'
 
-const SERVERS_DIR = '/home/z/my-project/mc-servers'
+const SERVERS_DIR = join(process.cwd(), 'mc-servers')
 
 function serverDir(id: string): string {
   return join(SERVERS_DIR, id)

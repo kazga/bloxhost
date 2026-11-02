@@ -27,8 +27,9 @@ import { existsSync, mkdirSync } from 'fs'
 import { join } from 'path'
 import { randomBytes } from 'crypto'
 
-const PLAYIT_BIN = '/home/z/my-project/mc-bin/playit'
-const PLAYIT_DIR = '/home/z/my-project/mc-bin/playit-data'
+const PROJECT_ROOT = process.cwd()
+const PLAYIT_BIN = join(PROJECT_ROOT, 'mc-bin', 'playit')
+const PLAYIT_DIR = join(PROJECT_ROOT, 'mc-bin', 'playit-data')
 const SOCKET_PATH = join(PLAYIT_DIR, 'ipc.sock')
 const SECRET_PATH = join(PLAYIT_DIR, 'secret.toml')
 const LOG_PATH = join(PLAYIT_DIR, 'agent.log')

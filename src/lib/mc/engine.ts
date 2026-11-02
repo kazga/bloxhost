@@ -14,10 +14,12 @@ import { ensureServerJar } from './versions'
 import { getPlayitAgent } from './playit'
 import { installFabric, isFabricInstalled, getFabricLaunchJar } from './fabric'
 
-const BASE_DIR = '/home/z/my-project/mc-bin'
-const SERVERS_DIR = '/home/z/my-project/mc-servers'
-const JDK_17_DIR = '/home/z/my-project/jdk/jdk-17.0.13+11'
-const JDK_25_DIR = '/home/z/my-project/jdk/jdk-25.0.5+8'
+// Resolve paths relative to the project root (works on any OS — Windows, Mac, Linux)
+const PROJECT_ROOT = process.cwd()
+const BASE_DIR = join(PROJECT_ROOT, 'mc-bin')
+const SERVERS_DIR = join(PROJECT_ROOT, 'mc-servers')
+const JDK_17_DIR = join(PROJECT_ROOT, 'jdk', 'jdk-17.0.13+11')
+const JDK_25_DIR = join(PROJECT_ROOT, 'jdk', 'jdk-25.0.5+8')
 
 const MAX_RUNNING = 1 // Resource constraint: only one Java server at a time
 const MAX_CONSOLE_LINES = 500
@@ -312,7 +314,7 @@ class McEngine {
 
     // Pick the right JDK for the version. Minecraft versions specify a required
     // major Java version (e.g. 1.20.4 → Java 17, 1.20.5+ → Java 21, 26.x → Java 25).
-    // We bundle Temurin JDK 17 and JDK 25 in /home/z/my-project/jdk/, and fall
+    // We bundle Temurin JDK 17 and JDK 25 in the jdk/ folder, and fall
     // back to the system Java 21 for anything in between.
     const javaBin = pickJavaBin(state.javaVersion)
 

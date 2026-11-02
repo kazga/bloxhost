@@ -6,3 +6,4 @@ db/*.db
 db/*.db-journal
 .git-old-backup/
 upload/
+.next/

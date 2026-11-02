@@ -1,7 +1,0 @@
-{
-  "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/servers/route": "app/api/servers/route.js",
-  "/api/stats/system/route": "app/api/stats/system/route.js",
-  "/api/versions/route": "app/api/versions/route.js",
-  "/page": "app/page.js"
-}

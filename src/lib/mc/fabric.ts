@@ -16,7 +16,8 @@ import { spawn } from 'child_process'
 import { existsSync, mkdirSync, statSync } from 'fs'
 import { join } from 'path'
 
-const FABRIC_INSTALLER_PATH = '/home/z/my-project/mc-bin/fabric-installer.jar'
+const PROJECT_ROOT = process.cwd()
+const FABRIC_INSTALLER_PATH = join(PROJECT_ROOT, 'mc-bin', 'fabric-installer.jar')
 const META_BASE = 'https://meta.fabricmc.net/v2/versions/loader'
 
 interface LoaderVersion {

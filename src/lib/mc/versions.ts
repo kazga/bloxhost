@@ -6,7 +6,8 @@ import { existsSync, mkdirSync, writeFileSync, readFileSync, statSync } from 'fs
 import { join } from 'path'
 import { spawn } from 'child_process'
 
-const BIN_DIR = '/home/z/my-project/mc-bin'
+const PROJECT_ROOT = process.cwd()
+const BIN_DIR = join(PROJECT_ROOT, 'mc-bin')
 const VERSIONS_CACHE_PATH = join(BIN_DIR, 'version-manifest.json')
 const VERSIONS_CACHE_TTL_MS = 1000 * 60 * 60 * 6 // 6 hours
 
