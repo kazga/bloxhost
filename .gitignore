@@ -1,0 +1,49 @@
+# Build artifacts
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Heavy binary assets — downloaded at install time via setup.sh
+mc-bin/
+jdk/
+mc-servers/
+
+# Database (user data — don't ship)
+db/*.db
+db/*.db-journal
+
+# Dev logs
+dev.log
+*.log
+.zscripts/dev.log
+.zscripts/mini-service-*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env.local
+.env.production
+
+# Playit agent data
+mc-bin/playit-data/
+
+# Upload directory (user files)
+upload/
+.env
+
+# Scaffold/system dirs (not part of the BlockHost app)
+.zscripts/
+skills/
+tests/
+examples/
+mini-services/
+.git-old-backup/
+logs/

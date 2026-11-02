@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Grass block style icon -->
+  <defs>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4ade80"/>
+      <stop offset="0.18" stop-color="#4ade80"/>
+      <stop offset="0.18" stop-color="#7c5a35"/>
+      <stop offset="1" stop-color="#5a3f25"/>
+    </linearGradient>
+  </defs>
+  <!-- Isometric cube -->
+  <g transform="translate(0,0)">
+    <!-- top -->
+    <polygon points="32,4 60,18 32,32 4,18" fill="#4ade80" stroke="#166534" stroke-width="1"/>
+    <!-- left -->
+    <polygon points="4,18 32,32 32,60 4,46" fill="#7c5a35" stroke="#5a3f25" stroke-width="1"/>
+    <!-- right -->
+    <polygon points="60,18 32,32 32,60 60,46" fill="#6a4a2a" stroke="#5a3f25" stroke-width="1"/>
+  </g>
+</svg>
