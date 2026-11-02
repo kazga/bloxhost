@@ -139,7 +139,7 @@ function Header({
           <Button variant="ghost" size="sm" onClick={onHome} className="text-muted-foreground hover:text-foreground">Home</Button>
           <Button variant="ghost" size="sm" onClick={onDashboard} className="text-muted-foreground hover:text-foreground">Dashboard</Button>
           <a href="#features" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">Features</a>
-          <a href="#pricing" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">Pricing</a>
+          <a href="#pricing" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">Free</a>
           <a href="#faq" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground">FAQ</a>
         </nav>
 
@@ -203,7 +203,7 @@ function Header({
         <div className="border-t border-border/40 md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-4 py-2 sm:px-6">
             <a href="#features" onClick={() => setMenuOpen(false)} className="py-2 text-sm text-muted-foreground hover:text-foreground">Features</a>
-            <a href="#pricing" onClick={() => setMenuOpen(false)} className="py-2 text-sm text-muted-foreground hover:text-foreground">Pricing</a>
+            <a href="#pricing" onClick={() => setMenuOpen(false)} className="py-2 text-sm text-muted-foreground hover:text-foreground">Free</a>
             <a href="#faq" onClick={() => setMenuOpen(false)} className="py-2 text-sm text-muted-foreground hover:text-foreground">FAQ</a>
           </nav>
         </div>
@@ -223,7 +223,7 @@ function Landing({
       <section className="relative overflow-hidden py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <Badge variant="outline" className="mb-5 gap-1.5 border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
-            <Gift className="h-3 w-3" /> 100% free forever · no credit card
+            <Gift className="h-3 w-3" /> 100% free forever · no paywalls
           </Badge>
           <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-6xl">
             Free Minecraft Server Hosting.
@@ -233,7 +233,7 @@ function Landing({
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
             Host vanilla, Paper, Spigot, Forge, and Fabric servers powered by <span className="text-emerald-300 font-medium">real <span className="font-mono">server.jar</span></span> Java processes.
-            Tunnel publicly via <span className="text-amber-300 font-medium">playit.gg</span>. Real-time console streaming from the actual JVM. No ads, no credit card — just play.
+            Tunnel publicly via <span className="text-amber-300 font-medium">playit.gg</span>. Real-time console streaming from the actual JVM. 100% free — just play.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -272,18 +272,18 @@ function Landing({
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Built for creators, by players</h2>
             <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-              All the tools you expect from a premium host — free, forever.
+              All the tools you need to run a great Minecraft server — 100% free, forever.
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Feature icon={<Zap />} title="Instant setup" desc="Pick a version, click create, and your server is online in under 60 seconds. No waiting, no queues." />
             <Feature icon={<Terminal />} title="Live console" desc="Real-time server console with full command input. Type /op, /give, /stop — anything you can run in-game." />
-            <Feature icon={<Cpu />} title="Dedicated resources" desc="2GB RAM per server on the free tier, burstable CPU, and SSD storage. Enough for ~20 concurrent players." />
+            <Feature icon={<Cpu />} title="Real Java processes" desc="Actual java -jar server.jar processes with real CPU/RAM stats. Up to 768MB RAM per server, burstable CPU, SSD storage." />
             <Feature icon={<Shield />} title="DDoS protection" desc="Enterprise-grade mitigation on every node. Your server stays online even under attack." />
-            <Feature icon={<Boxes />} title="Mod & plugin support" desc="Vanilla, Paper, Spigot, Forge, and Fabric. Install plugins from SpigotMC or mods from CurseForge with one click." />
-            <Feature icon={<Globe />} title="Global edge nodes" desc="12 regions worldwide — pick the closest to your players for sub-30ms latency. Free migration anytime." />
-            <Feature icon={<HardDrive />} title="Automatic backups" desc="Daily snapshots stored for 7 days on the free tier. Restore any version with one click." />
+            <Feature icon={<Boxes />} title="Mod & plugin support" desc="Vanilla, Paper, Spigot, Forge, and Fabric. Search and install mods from Modrinth with one click." />
+            <Feature icon={<Globe />} title="playit.gg tunneling" desc="Make your server publicly reachable via a *.playit.gg address — no port forwarding required, no extra cost." />
+            <Feature icon={<HardDrive />} title="File explorer" desc="Browse, upload, edit, and delete any file in your server's directory. Full control over configs, mods, and world saves." />
             <Feature icon={<Users />} title="Player management" desc="Whitelist, ban, OP, and kick players from the dashboard. Real-time player list with ping and gamemode." />
             <Feature icon={<Wifi />} title="99.9% uptime" desc="Battle-tested infrastructure with N+1 redundancy. If a node fails, your server is migrated automatically." />
           </div>
@@ -306,67 +306,63 @@ function Landing({
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* 100% Free */}
       <section id="pricing" className="scroll-mt-20 py-12 sm:py-16">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <Badge variant="outline" className="mb-3 gap-1.5 border-emerald-500/30 bg-emerald-500/10 text-emerald-300">
-              <Gift className="h-3 w-3" /> Always free tier
+              <Gift className="h-3 w-3" /> 100% free forever
             </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Simple pricing, no surprises</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">No pricing. It's all free.</h2>
             <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-              Start free, upgrade when you need more. Cancel anytime.
+              Every feature, every server type, every mod — completely free. No premium tiers, no paywalls, no credit card, no ads. Ever.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <PriceCard
-              name="Free"
-              price="$0"
-              period="forever"
-              features={[
-                '2GB RAM per server',
-                'Up to 20 players',
-                'Vanilla / Paper / Spigot',
-                'Live console + commands',
-                'Daily backups (7 days)',
-                'Community support',
-              ]}
-              cta="Start free"
-              onClick={onCreate}
-              highlight
-            />
-            <PriceCard
-              name="Premium"
-              price="$4"
-              period="/ month"
-              features={[
-                '6GB RAM per server',
-                'Up to 80 players',
-                'All mod loaders',
-                'Subdomain + dedicated IP',
-                'Hourly backups (30 days)',
-                'Priority support',
-              ]}
-              cta="Upgrade"
-              onClick={() => toast.info('Premium tier is a demo upgrade.')}
-            />
-            <PriceCard
-              name="Pro"
-              price="$12"
-              period="/ month"
-              features={[
-                '12GB RAM per server',
-                'Unlimited players',
-                'Dedicated bare-metal node',
-                'Custom domain + SSL',
-                'Real-time backups',
-                '24/7 live chat support',
-              ]}
-              cta="Contact us"
-              onClick={() => toast.info('Pro tier is a demo upgrade.')}
-            />
-          </div>
+          <Card className="mt-8 border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-card to-amber-500/5 p-8 text-center">
+            <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-emerald-500/15">
+              <Gift className="h-7 w-7 text-emerald-400" />
+            </div>
+            <h3 className="mt-4 text-2xl font-bold">$0 / forever</h3>
+            <p className="mt-2 text-sm text-muted-foreground">Everything included, no hidden costs</p>
+            <ul className="mx-auto mt-6 max-w-md space-y-2 text-left text-sm">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">Up to 10 servers per account</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">All server types — Vanilla, Paper, Spigot, Fabric, Forge</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">All Minecraft versions (1.7.10 → latest)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">Mod search &amp; one-click install via Modrinth</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">Full file explorer — upload, edit, delete any file</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">Live console + real-time commands</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">playit.gg tunneling for public access</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-muted-foreground">Unlimited players, unlimited uptime</span>
+              </li>
+            </ul>
+            <Button size="lg" onClick={onCreate} className="mt-6 gap-2 bg-emerald-500 text-black hover:bg-emerald-400">
+              <Sparkles className="h-4 w-4" /> Create your free server
+            </Button>
+          </Card>
         </div>
       </section>
 
@@ -378,30 +374,32 @@ function Landing({
           </div>
           <div className="mt-8 divide-y divide-border/60 rounded-lg border border-border/60 bg-card/60">
             <Faq q="Is this really free? What's the catch?">
-              Yes — the Free tier is genuinely free, forever. No credit card, no ads injected into your server,
-              no time limits. We sustain it through optional paid upgrades for power users who need more RAM
-              or player slots.
+              Yes — BlockHost is 100% free, forever. No credit card, no ads, no premium tiers, no paywalls.
+              Every feature is available to everyone: all server types, all Minecraft versions, mod support,
+              file access, playit.gg tunneling. There is no paid upgrade because there's nothing to upgrade to.
             </Faq>
             <Faq q="How long does my server stay online?">
-              Free servers stay online as long as they have at least one active player. After 10 minutes
-              of inactivity they go to sleep to save resources — wake them by joining again. Premium
-              servers stay online 24/7.
+              Your server stays online as long as you want it to. There are no time limits, no inactivity
+              sleep modes, no session caps. Start it, leave it running, come back days later — it's still there.
             </Faq>
             <Faq q="Can I install mods and plugins?">
-              Yes. Pick Forge or Fabric at creation for mods, or Paper/Spigot for plugins. You can upload
-              files via the integrated file manager or pull directly from SpigotMC and CurseForge.
+              Yes. Pick Fabric or Forge at creation for mods, or Paper/Spigot for plugins. You can search
+              and install mods directly from Modrinth via the Mods tab, or upload your own .jar files
+              via the file explorer.
             </Faq>
             <Faq q="Do you support older Minecraft versions?">
-              We support every Minecraft version from 1.7.10 to the latest release. Beta and Alpha
-              versions are available on request.
+              We support every Minecraft version from 1.7.10 to the latest release. The correct server.jar
+              is downloaded automatically from Mojang on first start. The right Java version (17, 21, or 25)
+              is selected automatically per Minecraft version.
             </Faq>
             <Faq q="What hardware do you run on?">
-              Free nodes run on Ryzen 9 7950X3D processors with NVMe SSD storage in a redundant
-              configuration. Premium and Pro tiers move you to dedicated hardware.
+              Servers run on real Java processes using Temurin JDK 17, 21, and 25. Each Minecraft server
+              gets up to 768 MB of RAM (sandbox cap). On a real VPS deployment you can allocate as much
+              RAM as your hardware allows.
             </Faq>
             <Faq q="Can I migrate my existing world?">
-              Yes — upload your world .zip via the file manager and we'll handle the rest. The first
-              5GB of storage is free; larger worlds can use paid add-on storage.
+              Yes — upload your world files via the file explorer (Files tab) and place them in the
+              <span className="font-mono"> world/</span> folder. No storage limits.
             </Faq>
           </div>
         </div>
@@ -590,7 +588,7 @@ function EmptyState({ hasServers, onCreate, onHome }: { hasServers: boolean; onC
       <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
         {hasServers
           ? 'Try a different search term, or create a new server to get started.'
-          : 'Create your first free Minecraft server in under 60 seconds. No credit card required.'}
+          : 'Create your first free Minecraft server in under 60 seconds. No payment required.'}
       </p>
       <div className="mt-5 flex justify-center gap-2">
         <Button onClick={onCreate} className="gap-2 bg-emerald-500 text-black hover:bg-emerald-400">
@@ -627,7 +625,7 @@ function Footer() {
             </div>
           </div>
 
-          <FooterCol title="Product" links={['Features', 'Pricing', 'Dashboard', 'Status']} />
+          <FooterCol title="Product" links={['Features', 'Free', 'Dashboard', 'Status']} />
           <FooterCol title="Resources" links={['Docs', 'Plugins', 'Mods', 'Tutorials']} />
           <FooterCol title="Company" links={['About', 'Blog', 'Careers', 'Contact']} />
         </div>
@@ -695,44 +693,6 @@ function Step({ n, icon, title, desc }: { n: number; icon: React.ReactNode; titl
       </div>
       <h3 className="mt-3 text-base font-semibold">{title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{desc}</p>
-    </Card>
-  )
-}
-
-function PriceCard({
-  name, price, period, features, cta, onClick, highlight,
-}: {
-  name: string; price: string; period: string; features: string[]; cta: string; onClick: () => void; highlight?: boolean
-}) {
-  return (
-    <Card className={`relative flex flex-col border p-6 ${highlight ? 'border-emerald-500/50 bg-emerald-500/5 ring-1 ring-emerald-500/30' : 'border-border/60 bg-card/60'}`}>
-      {highlight && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <Badge className="bg-emerald-500 px-3 text-black hover:bg-emerald-500">Most popular</Badge>
-        </div>
-      )}
-      <h3 className="text-lg font-semibold">{name}</h3>
-      <div className="mt-2 flex items-baseline gap-1">
-        <span className="text-3xl font-bold">{price}</span>
-        <span className="text-sm text-muted-foreground">{period}</span>
-      </div>
-
-      <ul className="mt-5 flex-1 space-y-2.5">
-        {features.map((f) => (
-          <li key={f} className="flex items-start gap-2 text-sm">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-            <span className="text-muted-foreground">{f}</span>
-          </li>
-        ))}
-      </ul>
-
-      <Button
-        onClick={onClick}
-        className={`mt-6 ${highlight ? 'bg-emerald-500 text-black hover:bg-emerald-400' : ''}`}
-        variant={highlight ? 'default' : 'outline'}
-      >
-        {cta}
-      </Button>
     </Card>
   )
 }

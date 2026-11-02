@@ -144,7 +144,7 @@ export function CreateServerDialog({ open, onOpenChange }: { open: boolean; onOp
             Create a new server
           </DialogTitle>
           <DialogDescription>
-            Free tier — up to 10 servers per account, 768MB RAM each (sandbox cap). No credit card required.
+            Free tier — up to 10 servers per account, 768MB RAM each. 100% free, no payment required.
           </DialogDescription>
         </DialogHeader>
 
