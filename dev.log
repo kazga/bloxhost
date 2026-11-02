@@ -1,0 +1,36 @@
+▲ Next.js 16.1.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://21.0.15.99:3000
+- Environments: .env
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+✓ Ready in 642ms
+○ Compiling / ...
+ GET / 200 in 5.6s (compile: 5.3s, render: 278ms)
+ GET / 200 in 5.1s (compile: 5.0s, render: 119ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/auth/me 200 in 707ms (compile: 643ms, render: 65ms)
+prisma:query SELECT `main`.`Server`.`id`, `main`.`Server`.`name`, `main`.`Server`.`ownerId`, `main`.`Server`.`ownerName`, `main`.`Server`.`type`, `main`.`Server`.`version`, `main`.`Server`.`status`, `main`.`Server`.`motd`, `main`.`Server`.`host`, `main`.`Server`.`port`, `main`.`Server`.`maxPlayers`, `main`.`Server`.`players`, `main`.`Server`.`cpu`, `main`.`Server`.`ram`, `main`.`Server`.`ramMax`, `main`.`Server`.`uptime`, `main`.`Server`.`worldName`, `main`.`Server`.`levelType`, `main`.`Server`.`levelSeed`, `main`.`Server`.`generateStructures`, `main`.`Server`.`difficulty`, `main`.`Server`.`gamemode`, `main`.`Server`.`hardcore`, `main`.`Server`.`pvp`, `main`.`Server`.`whitelist`, `main`.`Server`.`viewDistance`, `main`.`Server`.`simulationDistance`, `main`.`Server`.`spawnProtection`, `main`.`Server`.`maxWorldSize`, `main`.`Server`.`maxTickTime`, `main`.`Server`.`allowNether`, `main`.`Server`.`allowFlight`, `main`.`Server`.`enableCommandBlock`, `main`.`Server`.`enforceSecureProfile`, `main`.`Server`.`onlineMode`, `main`.`Server`.`resourcePack`, `main`.`Server`.`resourcePackSha1`, `main`.`Server`.`requireResourcePack`, `main`.`Server`.`playitAddress`, `main`.`Server`.`createdAt`, `main`.`Server`.`updatedAt` FROM `main`.`Server` WHERE (`main`.`Server`.`ownerId` = ? OR `main`.`Server`.`ownerId` = ?) ORDER BY `main`.`Server`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/servers 200 in 722ms (compile: 674ms, render: 48ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/auth/me 200 in 15ms (compile: 4ms, render: 12ms)
+prisma:query SELECT `main`.`Server`.`id`, `main`.`Server`.`name`, `main`.`Server`.`ownerId`, `main`.`Server`.`ownerName`, `main`.`Server`.`type`, `main`.`Server`.`version`, `main`.`Server`.`status`, `main`.`Server`.`motd`, `main`.`Server`.`host`, `main`.`Server`.`port`, `main`.`Server`.`maxPlayers`, `main`.`Server`.`players`, `main`.`Server`.`cpu`, `main`.`Server`.`ram`, `main`.`Server`.`ramMax`, `main`.`Server`.`uptime`, `main`.`Server`.`worldName`, `main`.`Server`.`levelType`, `main`.`Server`.`levelSeed`, `main`.`Server`.`generateStructures`, `main`.`Server`.`difficulty`, `main`.`Server`.`gamemode`, `main`.`Server`.`hardcore`, `main`.`Server`.`pvp`, `main`.`Server`.`whitelist`, `main`.`Server`.`viewDistance`, `main`.`Server`.`simulationDistance`, `main`.`Server`.`spawnProtection`, `main`.`Server`.`maxWorldSize`, `main`.`Server`.`maxTickTime`, `main`.`Server`.`allowNether`, `main`.`Server`.`allowFlight`, `main`.`Server`.`enableCommandBlock`, `main`.`Server`.`enforceSecureProfile`, `main`.`Server`.`onlineMode`, `main`.`Server`.`resourcePack`, `main`.`Server`.`resourcePackSha1`, `main`.`Server`.`requireResourcePack`, `main`.`Server`.`playitAddress`, `main`.`Server`.`createdAt`, `main`.`Server`.`updatedAt` FROM `main`.`Server` WHERE (`main`.`Server`.`ownerId` = ? OR `main`.`Server`.`ownerId` = ?) ORDER BY `main`.`Server`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/servers 200 in 17ms (compile: 9ms, render: 8ms)
+⚠ Cross origin request detected from preview-chat-83d3659f-4fd7-45d2-a212-e0562002dd0e.space-z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 64ms (compile: 25ms, render: 39ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Server`.`id`, `main`.`Server`.`name`, `main`.`Server`.`ownerId`, `main`.`Server`.`ownerName`, `main`.`Server`.`type`, `main`.`Server`.`version`, `main`.`Server`.`status`, `main`.`Server`.`motd`, `main`.`Server`.`host`, `main`.`Server`.`port`, `main`.`Server`.`maxPlayers`, `main`.`Server`.`players`, `main`.`Server`.`cpu`, `main`.`Server`.`ram`, `main`.`Server`.`ramMax`, `main`.`Server`.`uptime`, `main`.`Server`.`worldName`, `main`.`Server`.`levelType`, `main`.`Server`.`levelSeed`, `main`.`Server`.`generateStructures`, `main`.`Server`.`difficulty`, `main`.`Server`.`gamemode`, `main`.`Server`.`hardcore`, `main`.`Server`.`pvp`, `main`.`Server`.`whitelist`, `main`.`Server`.`viewDistance`, `main`.`Server`.`simulationDistance`, `main`.`Server`.`spawnProtection`, `main`.`Server`.`maxWorldSize`, `main`.`Server`.`maxTickTime`, `main`.`Server`.`allowNether`, `main`.`Server`.`allowFlight`, `main`.`Server`.`enableCommandBlock`, `main`.`Server`.`enforceSecureProfile`, `main`.`Server`.`onlineMode`, `main`.`Server`.`resourcePack`, `main`.`Server`.`resourcePackSha1`, `main`.`Server`.`requireResourcePack`, `main`.`Server`.`playitAddress`, `main`.`Server`.`createdAt`, `main`.`Server`.`updatedAt` FROM `main`.`Server` WHERE (`main`.`Server`.`ownerId` = ? OR `main`.`Server`.`ownerId` = ?) ORDER BY `main`.`Server`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/servers 200 in 39ms (compile: 20ms, render: 19ms)
+ GET /api/auth/me 200 in 29ms (compile: 21ms, render: 8ms)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`playitSecret` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET / 200 in 93ms (compile: 4ms, render: 89ms)
+ GET / 200 in 37ms (compile: 1898µs, render: 35ms)
+37ms (compile: 1898µs, render: 35ms)

@@ -1,0 +1,2 @@
+$ bun --hot index.ts
+MC Engine WebSocket server running on port 3003

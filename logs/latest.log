@@ -1,0 +1,18 @@
+[12:49:52] [ServerMain/ERROR]: Failed to load properties from file: server.properties
+java.nio.file.NoSuchFileException: server.properties
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:160) ~[?:?]
+	at ame.b(SourceFile:62) ~[server-1.20.4.jar:?]
+	at amb.a(SourceFile:138) ~[server-1.20.4.jar:?]
+	at amc.<init>(SourceFile:12) ~[server-1.20.4.jar:?]
+	at net.minecraft.server.Main.main(SourceFile:112) ~[server-1.20.4.jar:?]
+	at net.minecraft.bundler.Main.lambda$run$0(Main.java:54) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[12:49:52] [ServerMain/WARN]: Failed to load eula.txt
+[12:49:52] [ServerMain/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
